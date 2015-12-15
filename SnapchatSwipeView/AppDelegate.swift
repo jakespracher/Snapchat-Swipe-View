@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let left = storyboard.instantiateViewControllerWithIdentifier("left")
+        let middle = storyboard.instantiateViewControllerWithIdentifier("middle")
+        let right = storyboard.instantiateViewControllerWithIdentifier("right")
+        let top = storyboard.instantiateViewControllerWithIdentifier("top")
+        let snapContainer = SnapContainerViewController.containerViewWith(left, middleVC: middle, rightVC: right, topVC: top)
+        self.window?.rootViewController = snapContainer
+        self.window?.makeKeyAndVisible()
         return true
     }
 

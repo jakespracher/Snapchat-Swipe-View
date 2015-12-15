@@ -7,37 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22656DEA1C1F67D700BF6959 /* VerticalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22656DE91C1F67D700BF6959 /* VerticalScrollViewController.swift */; };
+		22656DEC1C2059C100BF6959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22656DEB1C2059C100BF6959 /* Main.storyboard */; };
+		22656DEE1C205A6800BF6959 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22656DED1C205A6800BF6959 /* Launch Screen.storyboard */; };
 		22D3F91A1B87A81D00D132E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F9191B87A81D00D132E3 /* Images.xcassets */; };
-		22D3F91F1B87A89B00D132E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F91D1B87A89B00D132E3 /* Main.storyboard */; };
 		22D3F92C1B87A8B800D132E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9201B87A8B800D132E3 /* AppDelegate.swift */; };
-		22D3F92D1B87A8B800D132E3 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9211B87A8B800D132E3 /* AViewController.swift */; };
-		22D3F92E1B87A8B800D132E3 /* AViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F9221B87A8B800D132E3 /* AViewController.xib */; };
-		22D3F92F1B87A8B800D132E3 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9231B87A8B800D132E3 /* BViewController.swift */; };
-		22D3F9301B87A8B800D132E3 /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F9241B87A8B800D132E3 /* BViewController.xib */; };
-		22D3F9311B87A8B800D132E3 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9251B87A8B800D132E3 /* ContainerViewController.swift */; };
-		22D3F9321B87A8B800D132E3 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9261B87A8B800D132E3 /* CViewController.swift */; };
-		22D3F9331B87A8B800D132E3 /* CViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F9271B87A8B800D132E3 /* CViewController.xib */; };
-		22D3F9341B87A8B800D132E3 /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9281B87A8B800D132E3 /* DViewController.swift */; };
-		22D3F9351B87A8B800D132E3 /* DViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F9291B87A8B800D132E3 /* DViewController.xib */; };
-		22D3F9361B87A8B800D132E3 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F92A1B87A8B800D132E3 /* EViewController.swift */; };
-		22D3F9371B87A8B800D132E3 /* EViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D3F92B1B87A8B800D132E3 /* EViewController.xib */; };
+		22D3F9311B87A8B800D132E3 /* SnapContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3F9251B87A8B800D132E3 /* SnapContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22656DE91C1F67D700BF6959 /* VerticalScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScrollViewController.swift; sourceTree = "<group>"; };
+		22656DEB1C2059C100BF6959 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		22656DED1C205A6800BF6959 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		22D3F9191B87A81D00D132E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22D3F91E1B87A89B00D132E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22D3F9201B87A8B800D132E3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22D3F9211B87A8B800D132E3 /* AViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
-		22D3F9221B87A8B800D132E3 /* AViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AViewController.xib; sourceTree = "<group>"; };
-		22D3F9231B87A8B800D132E3 /* BViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
-		22D3F9241B87A8B800D132E3 /* BViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
-		22D3F9251B87A8B800D132E3 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		22D3F9261B87A8B800D132E3 /* CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
-		22D3F9271B87A8B800D132E3 /* CViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CViewController.xib; sourceTree = "<group>"; };
-		22D3F9281B87A8B800D132E3 /* DViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
-		22D3F9291B87A8B800D132E3 /* DViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DViewController.xib; sourceTree = "<group>"; };
-		22D3F92A1B87A8B800D132E3 /* EViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
-		22D3F92B1B87A8B800D132E3 /* EViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EViewController.xib; sourceTree = "<group>"; };
+		22D3F9251B87A8B800D132E3 /* SnapContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapContainerViewController.swift; sourceTree = "<group>"; };
 		C6164C1B1984D1CD00F8F7D7 /* SnapchatSwipeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapchatSwipeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6164C1F1984D1CD00F8F7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6164C321984D1CD00F8F7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,35 +42,10 @@
 		2200D71B1B87A97E0081389A /* Container View */ = {
 			isa = PBXGroup;
 			children = (
-				22D3F9251B87A8B800D132E3 /* ContainerViewController.swift */,
-				2200D71C1B87A9950081389A /* Middle */,
-				2200D71D1B87A99E0081389A /* Top/Bottom */,
+				22D3F9251B87A8B800D132E3 /* SnapContainerViewController.swift */,
+				22656DE91C1F67D700BF6959 /* VerticalScrollViewController.swift */,
 			);
 			name = "Container View";
-			sourceTree = "<group>";
-		};
-		2200D71C1B87A9950081389A /* Middle */ = {
-			isa = PBXGroup;
-			children = (
-				22D3F9211B87A8B800D132E3 /* AViewController.swift */,
-				22D3F9221B87A8B800D132E3 /* AViewController.xib */,
-				22D3F9231B87A8B800D132E3 /* BViewController.swift */,
-				22D3F9241B87A8B800D132E3 /* BViewController.xib */,
-				22D3F9261B87A8B800D132E3 /* CViewController.swift */,
-				22D3F9271B87A8B800D132E3 /* CViewController.xib */,
-			);
-			name = Middle;
-			sourceTree = "<group>";
-		};
-		2200D71D1B87A99E0081389A /* Top/Bottom */ = {
-			isa = PBXGroup;
-			children = (
-				22D3F9281B87A8B800D132E3 /* DViewController.swift */,
-				22D3F9291B87A8B800D132E3 /* DViewController.xib */,
-				22D3F92A1B87A8B800D132E3 /* EViewController.swift */,
-				22D3F92B1B87A8B800D132E3 /* EViewController.xib */,
-			);
-			name = Top/Bottom;
 			sourceTree = "<group>";
 		};
 		C6164C121984D1CD00F8F7D7 = {
@@ -109,8 +68,9 @@
 		C6164C1D1984D1CD00F8F7D7 /* SnapchatSwipeView */ = {
 			isa = PBXGroup;
 			children = (
+				22656DED1C205A6800BF6959 /* Launch Screen.storyboard */,
+				22656DEB1C2059C100BF6959 /* Main.storyboard */,
 				22D3F9201B87A8B800D132E3 /* AppDelegate.swift */,
-				22D3F91D1B87A89B00D132E3 /* Main.storyboard */,
 				2200D71B1B87A97E0081389A /* Container View */,
 				22D3F9191B87A81D00D132E3 /* Images.xcassets */,
 				C6164C1E1984D1CD00F8F7D7 /* Supporting Files */,
@@ -169,6 +129,8 @@
 		C6164C131984D1CD00F8F7D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Brendan Lee";
 				TargetAttributes = {
@@ -200,13 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D3F9331B87A8B800D132E3 /* CViewController.xib in Resources */,
-				22D3F92E1B87A8B800D132E3 /* AViewController.xib in Resources */,
-				22D3F9301B87A8B800D132E3 /* BViewController.xib in Resources */,
-				22D3F9371B87A8B800D132E3 /* EViewController.xib in Resources */,
-				22D3F9351B87A8B800D132E3 /* DViewController.xib in Resources */,
+				22656DEE1C205A6800BF6959 /* Launch Screen.storyboard in Resources */,
 				22D3F91A1B87A81D00D132E3 /* Images.xcassets in Resources */,
-				22D3F91F1B87A89B00D132E3 /* Main.storyboard in Resources */,
+				22656DEC1C2059C100BF6959 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,28 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D3F92D1B87A8B800D132E3 /* AViewController.swift in Sources */,
-				22D3F9341B87A8B800D132E3 /* DViewController.swift in Sources */,
-				22D3F92F1B87A8B800D132E3 /* BViewController.swift in Sources */,
-				22D3F9321B87A8B800D132E3 /* CViewController.swift in Sources */,
-				22D3F9311B87A8B800D132E3 /* ContainerViewController.swift in Sources */,
+				22656DEA1C1F67D700BF6959 /* VerticalScrollViewController.swift in Sources */,
+				22D3F9311B87A8B800D132E3 /* SnapContainerViewController.swift in Sources */,
 				22D3F92C1B87A8B800D132E3 /* AppDelegate.swift in Sources */,
-				22D3F9361B87A8B800D132E3 /* EViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		22D3F91D1B87A89B00D132E3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22D3F91E1B87A89B00D132E3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C6164C351984D1CD00F8F7D7 /* Debug */ = {
@@ -322,7 +265,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SnapchatSwipeView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -336,7 +278,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SnapchatSwipeView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
