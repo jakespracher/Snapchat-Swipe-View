@@ -10,14 +10,14 @@ Hide more ViewControllers in ALL the directions! Snapchat-Swipe-View mimics the 
 1.5) [Make sure your project supports swift](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html)
 
 2.) In your appDelegate:
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let left = storyboard.instantiateViewControllerWithIdentifier("left")
-        let middle = storyboard.instantiateViewControllerWithIdentifier("middle")
-        let right = storyboard.instantiateViewControllerWithIdentifier("right")
-        let top = storyboard.instantiateViewControllerWithIdentifier("top")
-        let snapContainer = SnapContainerViewController.containerViewWith(left, middleVC: middle, rightVC: right, topVC: top)
-        self.window?.rootViewController = snapContainer
-        self.window?.makeKeyAndVisible()
-
+```swift
+let storyboard = UIStoryboard(name: "Main", bundle: nil)
+let left = storyboard.instantiateViewControllerWithIdentifier("left")
+let middle = storyboard.instantiateViewControllerWithIdentifier("middle")
+let right = storyboard.instantiateViewControllerWithIdentifier("right")
+let top = storyboard.instantiateViewControllerWithIdentifier("top")
+let snapContainer = SnapContainerViewController.containerViewWith(left, middleVC: middle, rightVC: right, topVC: top)
+self.window?.rootViewController = snapContainer
+self.window?.makeKeyAndVisible()
+'''
 NOTE: If any of your view controllers depend on scroll gestures (e.g. UITableViewController) be aware that only the left and right view controllers can recieve vertical scroll gestures. Horizontal scroll gestures are not supported anywhere, and vertical ones arent supporeted on the middle view controllers because it wouldnt make sense (you will notice snapchat doesnt use them either).
