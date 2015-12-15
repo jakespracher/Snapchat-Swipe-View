@@ -19,5 +19,6 @@ let top = storyboard.instantiateViewControllerWithIdentifier("top")
 let snapContainer = SnapContainerViewController.containerViewWith(left, middleVC: middle, rightVC: right, topVC: top)
 self.window?.rootViewController = snapContainer
 self.window?.makeKeyAndVisible()
-'''
+```
+
 NOTE: If any of your view controllers depend on scroll gestures (e.g. UITableViewController) be aware that only the left and right view controllers can recieve vertical scroll gestures. Horizontal scroll gestures are not supported anywhere, and vertical ones arent supporeted on the middle view controllers because it wouldnt make sense (you will notice snapchat doesnt use them either).
