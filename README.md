@@ -24,7 +24,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
     // ...
 }
 ```
-
 4. If you are using Storyboards, ensure you have an arbitrary initial view controller set. If you use the code in step 3, the middle view controller will always be shown first, so this is needless but you will get an error if you don't do it.
 
 NOTE: If any of your view controllers depend on scroll gestures (e.g. UITableViewController) be aware that only the left and right view controllers can recieve vertical scroll gestures. Horizontal scroll gestures are not supported anywhere, and vertical ones arent supporeted on the middle view controllers because it wouldnt make sense (you will notice snapchat doesnt use them either).
