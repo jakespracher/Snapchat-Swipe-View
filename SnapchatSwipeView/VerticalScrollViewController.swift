@@ -3,7 +3,7 @@
 //  SnapchatSwipeView
 //
 //  Created by Jake Spracher on 12/14/15.
-//  Copyright © 2015 Brendan Lee. All rights reserved.
+//  Copyright © 2015 Jake Spracher. All rights reserved.
 //
 
 import UIKit
