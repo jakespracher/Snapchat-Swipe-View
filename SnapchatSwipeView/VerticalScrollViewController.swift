@@ -43,11 +43,12 @@ class VerticalScrollViewController: UIViewController, UIScrollViewDelegate {
         middleVc.view.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))
         
         self.addChildViewController(middleVc)
-        self.scrollView!.addSubview(middleVc.view)
-        middleVc.didMoveToParentViewController(self)
-        
         self.addChildViewController(topVc)
+
+        self.scrollView!.addSubview(middleVc.view)
         self.scrollView!.addSubview(topVc.view)
+        
+        middleVc.didMoveToParentViewController(self)
         topVc.didMoveToParentViewController(self)
         
         self.scrollView!.contentOffset.y = middleVc.view.frame.origin.y
