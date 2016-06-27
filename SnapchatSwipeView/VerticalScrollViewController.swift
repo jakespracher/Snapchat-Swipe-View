@@ -32,27 +32,28 @@ class VerticalScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.bounces = false
         
-        self.scrollView!.frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))
-        self.view.addSubview(scrollView)
+        scrollView.frame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y, width: view.bounds.width, height: view.bounds.height)
+        view.addSubview(scrollView)
         
-        let scrollWidth: CGFloat  = CGRectGetWidth(self.view.bounds)
-        let scrollHeight: CGFloat  = 2 * CGRectGetHeight(self.view.bounds)
-        self.scrollView!.contentSize = CGSizeMake(scrollWidth, scrollHeight)
+        let scrollWidth: CGFloat  = view.bounds.width
+        let scrollHeight: CGFloat  = 2 * view.bounds.height
         
-        topVc.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))
-        middleVc.view.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))
+        scrollView.contentSize = CGSize(width: scrollWidth, height: scrollHeight)
         
-        self.addChildViewController(middleVc)
-        self.addChildViewController(topVc)
+        topVc.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        middleVc.view.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: view.bounds.height)
+        
+        addChildViewController(middleVc)
+        addChildViewController(topVc)
 
-        self.scrollView!.addSubview(middleVc.view)
-        self.scrollView!.addSubview(topVc.view)
+        scrollView.addSubview(middleVc.view)
+        scrollView.addSubview(topVc.view)
         
         middleVc.didMoveToParentViewController(self)
         topVc.didMoveToParentViewController(self)
         
-        self.scrollView!.contentOffset.y = middleVc.view.frame.origin.y
-        self.scrollView!.delegate = self;
+        scrollView.contentOffset.y = middleVc.view.frame.origin.y
+        scrollView.delegate = self;
     }
     
 }
