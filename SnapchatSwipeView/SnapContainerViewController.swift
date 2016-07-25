@@ -12,13 +12,15 @@ protocol SnapContainerViewControllerDelegate {
     func outerScrollViewShouldScroll() -> Bool
 }
 
-class SnapContainerViewController: UIViewController {
+class SnapContainerViewController: UIViewController, UIScrollViewDelegate {
     
     var topVc: UIViewController?
     var leftVc: UIViewController!
     var middleVc: UIViewController!
     var rightVc: UIViewController!
     var bottomVc: UIViewController?
+    
+    var directionLockDisabled: Bool!
     
     var horizontalViews = [UIViewController]()
     var veritcalViews = [UIViewController]()
@@ -32,8 +34,12 @@ class SnapContainerViewController: UIViewController {
                                  middleVC: UIViewController,
                                  rightVC: UIViewController,
                                  topVC: UIViewController?=nil,
-                                 bottomVC: UIViewController?=nil) -> SnapContainerViewController {
+                                 bottomVC: UIViewController?=nil,
+                                 directionLockDisabled: Bool?=false) -> SnapContainerViewController {
         let container = SnapContainerViewController()
+        
+        container.directionLockDisabled = directionLockDisabled
+        
         container.topVc = topVC
         container.leftVc = leftVC
         container.middleVc = middleVC
@@ -111,6 +117,21 @@ class SnapContainerViewController: UIViewController {
         rightVc.didMoveToParentViewController(self)
         
         scrollView.contentOffset.x = middleVertScrollVc.view.frame.origin.x
+        scrollView.delegate = self
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        self.initialContentOffset = scrollView.contentOffset
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if delegate != nil && !delegate!.outerScrollViewShouldScroll() && !directionLockDisabled {
+            let newOffset = CGPointMake(self.initialContentOffset.x, self.initialContentOffset.y)
+        
+            // Setting the new offset to the scrollView makes it behave like a proper
+            // directional lock, that allows you to scroll in only one direction at any given time
+            self.scrollView!.setContentOffset(newOffset, animated:  false)
+        }
     }
     
 }
