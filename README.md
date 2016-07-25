@@ -20,13 +20,13 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
     let middle = storyboard.instantiateViewControllerWithIdentifier("middle")
     let right = storyboard.instantiateViewControllerWithIdentifier("right")
     let top = storyboard.instantiateViewControllerWithIdentifier("top")
-        let bottom = storyboard.instantiateViewControllerWithIdentifier("bottom")
-        
-        let snapContainer = SnapContainerViewController.containerViewWith(left,
-                                                                          middleVC: middle,
-                                                                          rightVC: right,
-                                                                          topVC: top,
-                                                                          bottomVC: bottom)
+    let bottom = storyboard.instantiateViewControllerWithIdentifier("bottom")
+    
+    let snapContainer = SnapContainerViewController.containerViewWith(left,
+                                                                      middleVC: middle,
+                                                                      rightVC: right,
+                                                                      topVC: top,
+                                                                      bottomVC: bottom)
     
     self.window?.rootViewController = snapContainer
     self.window?.makeKeyAndVisible()
