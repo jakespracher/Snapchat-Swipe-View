@@ -14,19 +14,22 @@ Snapchat-Swipe-View mimics the classic 2015 Snapchat top, down, left, and right 
 4. In your App Delegate:
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-    // ...
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     let left = storyboard.instantiateViewControllerWithIdentifier("left")
     let middle = storyboard.instantiateViewControllerWithIdentifier("middle")
     let right = storyboard.instantiateViewControllerWithIdentifier("right")
     let top = storyboard.instantiateViewControllerWithIdentifier("top")
-    
-    let snapContainer = SnapContainerViewController.containerViewWith(left, middleVC: middle, rightVC: right, topVC: top)
+        let bottom = storyboard.instantiateViewControllerWithIdentifier("bottom")
+        
+        let snapContainer = SnapContainerViewController.containerViewWith(left,
+                                                                          middleVC: middle,
+                                                                          rightVC: right,
+                                                                          topVC: top,
+                                                                          bottomVC: bottom)
     
     self.window?.rootViewController = snapContainer
     self.window?.makeKeyAndVisible()
-    // ...
 }
 ```
 
