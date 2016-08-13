@@ -136,6 +136,7 @@
 				TargetAttributes = {
 					C6164C1A1984D1CD00F8F7D7 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -271,6 +272,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SnapchatSwipeView;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -283,6 +285,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SnapchatSwipeView;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

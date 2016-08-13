@@ -30,7 +30,7 @@ class SnapContainerViewController: UIViewController, UIScrollViewDelegate {
     var scrollView: UIScrollView!
     var delegate: SnapContainerViewControllerDelegate?
     
-    class func containerViewWith(leftVC: UIViewController,
+    class func containerViewWith(_ leftVC: UIViewController,
                                  middleVC: UIViewController,
                                  rightVC: UIViewController,
                                  topVC: UIViewController?=nil,
@@ -55,7 +55,7 @@ class SnapContainerViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupVerticalScrollView() {
-        middleVertScrollVc = VerticalScrollViewController.verticalScrollVcWith(middleVc,
+        middleVertScrollVc = VerticalScrollViewController.verticalScrollVcWith(middleVc: middleVc,
                                                                                topVc: topVc,
                                                                                bottomVc: bottomVc)
         delegate = middleVertScrollVc
@@ -63,7 +63,7 @@ class SnapContainerViewController: UIViewController, UIScrollViewDelegate {
     
     func setupHorizontalScrollView() {
         scrollView = UIScrollView()
-        scrollView.pagingEnabled = true
+        scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.bounces = false
         
@@ -112,21 +112,21 @@ class SnapContainerViewController: UIViewController, UIScrollViewDelegate {
         scrollView.addSubview(middleVertScrollVc.view)
         scrollView.addSubview(rightVc.view)
         
-        leftVc.didMoveToParentViewController(self)
-        middleVertScrollVc.didMoveToParentViewController(self)
-        rightVc.didMoveToParentViewController(self)
+        leftVc.didMove(toParentViewController: self)
+        middleVertScrollVc.didMove(toParentViewController: self)
+        rightVc.didMove(toParentViewController: self)
         
         scrollView.contentOffset.x = middleVertScrollVc.view.frame.origin.x
         scrollView.delegate = self
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.initialContentOffset = scrollView.contentOffset
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if delegate != nil && !delegate!.outerScrollViewShouldScroll() && !directionLockDisabled {
-            let newOffset = CGPointMake(self.initialContentOffset.x, self.initialContentOffset.y)
+            let newOffset = CGPoint(x: self.initialContentOffset.x, y: self.initialContentOffset.y)
         
             // Setting the new offset to the scrollView makes it behave like a proper
             // directional lock, that allows you to scroll in only one direction at any given time
