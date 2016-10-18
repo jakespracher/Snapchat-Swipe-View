@@ -32,5 +32,5 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
     self.window?.makeKeyAndVisible()
 }
 ```
-
+NOTE: This is an example, you will likely need to modify this to suit your needs. (e.g. if you will be adding a separate login/sign up flow)
 NOTE: If any of your view controllers depend on scroll gestures (e.g. UITableViewController) be aware that only the left and right view controllers can recieve vertical scroll gestures. Horizontal scroll gestures are not supported anywhere, and vertical ones arent supporeted on the middle view controllers because it wouldnt make sense (you will notice snapchat doesnt use them either).
