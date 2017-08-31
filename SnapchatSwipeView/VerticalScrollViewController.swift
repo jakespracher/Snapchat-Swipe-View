@@ -71,7 +71,7 @@ class VerticalScrollViewController: UIViewController, SnapContainerViewControlle
             
             scrollView.contentOffset.y = middleVc.view.frame.origin.y
             
-        } else if topVc == nil {
+        } else if topVc == nil && bottomVc != nil {
             scrollHeight  = 2 * view.height
             middleVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
             bottomVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
@@ -87,7 +87,7 @@ class VerticalScrollViewController: UIViewController, SnapContainerViewControlle
             
             scrollView.contentOffset.y = 0
 
-        } else if bottomVc == nil {
+        } else if bottomVc == nil && topVc != nil {
             scrollHeight  = 2 * view.height
             topVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
             middleVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
