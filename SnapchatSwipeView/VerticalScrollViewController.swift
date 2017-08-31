@@ -51,7 +51,45 @@ class VerticalScrollViewController: UIViewController, SnapContainerViewControlle
         let scrollWidth: CGFloat  = view.width
         var scrollHeight: CGFloat
         
-        if topVc != nil && bottomVc != nil {
+        switch (topVc, bottomVc) {
+        case (nil, nil):
+            scrollHeight  = view.height
+            middleVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
+            
+            addChildViewController(middleVc)
+            scrollView.addSubview(middleVc.view)
+            middleVc.didMove(toParentViewController: self)
+        case (_?, nil):
+            scrollHeight  = 2 * view.height
+            topVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
+            middleVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
+            
+            addChildViewController(topVc)
+            addChildViewController(middleVc)
+            
+            scrollView.addSubview(topVc.view)
+            scrollView.addSubview(middleVc.view)
+            
+            topVc.didMove(toParentViewController: self)
+            middleVc.didMove(toParentViewController: self)
+            
+            scrollView.contentOffset.y = middleVc.view.frame.origin.y
+        case (nil, _?):
+            scrollHeight  = 2 * view.height
+            middleVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
+            bottomVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
+            
+            addChildViewController(middleVc)
+            addChildViewController(bottomVc)
+            
+            scrollView.addSubview(middleVc.view)
+            scrollView.addSubview(bottomVc.view)
+            
+            middleVc.didMove(toParentViewController: self)
+            bottomVc.didMove(toParentViewController: self)
+            
+            scrollView.contentOffset.y = 0
+        default:
             scrollHeight  = 3 * view.height
             topVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
             middleVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
@@ -70,46 +108,6 @@ class VerticalScrollViewController: UIViewController, SnapContainerViewControlle
             bottomVc.didMove(toParentViewController: self)
             
             scrollView.contentOffset.y = middleVc.view.frame.origin.y
-            
-        } else if topVc == nil && bottomVc != nil {
-            scrollHeight  = 2 * view.height
-            middleVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
-            bottomVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
-            
-            addChildViewController(middleVc)
-            addChildViewController(bottomVc)
-            
-            scrollView.addSubview(middleVc.view)
-            scrollView.addSubview(bottomVc.view)
-            
-            middleVc.didMove(toParentViewController: self)
-            bottomVc.didMove(toParentViewController: self)
-            
-            scrollView.contentOffset.y = 0
-
-        } else if bottomVc == nil && topVc != nil {
-            scrollHeight  = 2 * view.height
-            topVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
-            middleVc.view.frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height)
-            
-            addChildViewController(topVc)
-            addChildViewController(middleVc)
-            
-            scrollView.addSubview(topVc.view)
-            scrollView.addSubview(middleVc.view)
-            
-            topVc.didMove(toParentViewController: self)
-            middleVc.didMove(toParentViewController: self)
-            
-            scrollView.contentOffset.y = middleVc.view.frame.origin.y
-
-        } else {
-            scrollHeight  = view.height
-            middleVc.view.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
-            
-            addChildViewController(middleVc)
-            scrollView.addSubview(middleVc.view)
-            middleVc.didMove(toParentViewController: self)
         }
         
         scrollView.contentSize = CGSize(width: scrollWidth, height: scrollHeight)
